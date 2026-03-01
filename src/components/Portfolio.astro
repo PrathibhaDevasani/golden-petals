@@ -1,0 +1,97 @@
+---
+const portfolioImages = [
+  { src: "/images/portfolio-1.jpeg", alt: "Wedding decoration" },
+  { src: "/images/portfolio-2.jpeg", alt: "Reception setup" },
+  { src: "/images/portfolio-3.jpeg", alt: "Traditional ceremony" },
+  { src: "/images/portfolio-4.jpeg", alt: "Floral arrangement" },
+  { src: "/images/portfolio-5.jpeg", alt: "Event decoration" },
+  { src: "/images/portfolio-6.jpeg", alt: "Wedding mandap" },
+];
+---
+
+<section
+  id="portfolio"
+  class="flex flex-col items-center gap-12 w-full px-20 py-20 bg-[var(--charcoal-900)]"
+>
+  <!-- Section Header -->
+  <div class="flex flex-col items-center gap-4">
+    <span
+      class="text-[var(--brand-gold-500)] font-body text-[13px] font-semibold tracking-[3px]"
+    >
+      OUR PORTFOLIO
+    </span>
+    <h2
+      class="font-heading text-[var(--white)] text-[42px] font-bold text-center"
+    >
+      A Glimpse of Our Artistry
+    </h2>
+    <p
+      class="font-body text-[var(--taupe-300)] text-base font-normal leading-[1.7] text-center max-w-[550px]"
+    >
+      Each event is a masterpiece, designed to reflect your unique story and
+      style.
+    </p>
+  </div>
+
+  <!-- Divider -->
+  <div class="flex items-center gap-4 w-[300px]">
+    <div class="flex-1 h-px bg-[var(--brand-gold-500)]"></div>
+    <svg
+      class="w-5 h-5 text-[var(--brand-gold-500)]"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path
+        d="M12 7.5a4.5 4.5 0 1 1 4.5 4.5M12 7.5A4.5 4.5 0 1 0 7.5 12M12 7.5V9m-4.5 3a4.5 4.5 0 1 0 4.5 4.5M7.5 12H9m3 4.5V15m4.5-3a4.5 4.5 0 1 1-4.5 4.5m4.5-4.5H15"
+        stroke="currentColor"
+        stroke-width="1.5"
+        fill="none"></path>
+    </svg>
+    <div class="flex-1 h-px bg-[var(--brand-gold-500)]"></div>
+  </div>
+
+  <!-- Portfolio Grid (Masonry-like) -->
+  <div class="flex gap-4 w-full h-[600px]">
+    <!-- Column 1 -->
+    <div class="flex flex-col gap-4 flex-1 h-full">
+      <div
+        class="flex-1 rounded-[var(--radius-md)] bg-cover bg-center"
+        style={`background-image: url('${portfolioImages[0].src}')`}
+      >
+      </div>
+      <div
+        class="h-[200px] rounded-[var(--radius-md)] bg-cover bg-center"
+        style={`background-image: url('${portfolioImages[1].src}')`}
+      >
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="flex flex-col gap-4 flex-1 h-full">
+      <div
+        class="h-[200px] rounded-[var(--radius-md)] bg-cover bg-center"
+        style={`background-image: url('${portfolioImages[2].src}')`}
+      >
+      </div>
+      <div
+        class="flex-1 rounded-[var(--radius-md)] bg-cover bg-center"
+        style={`background-image: url('${portfolioImages[3].src}')`}
+      >
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="flex flex-col gap-4 flex-1 h-full">
+      <div
+        class="flex-1 rounded-[var(--radius-md)] bg-cover bg-center"
+        style={`background-image: url('${portfolioImages[4].src}')`}
+      >
+      </div>
+      <div
+        class="h-[200px] rounded-[var(--radius-md)] bg-cover bg-center"
+        style={`background-image: url('${portfolioImages[5].src}')`}
+      >
+      </div>
+    </div>
+  </div>
+</section>

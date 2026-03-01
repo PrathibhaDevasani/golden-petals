@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --brand-gold-300: #E5D2A3;
+  --brand-gold-500: #C6A75E;
+  --brand-gold-700: #A8893D;
+  --brand-gold-900: #8A6F2F;
+
+  /* Neutral Colors */
+  --charcoal-900: #2E2A28;
+  --cream-50: #FAF7F2;
+  --warm-white: #FDFCF9;
+  --white: #FFFFFF;
+  --transparent: #FFFFFF00;
+
+  /* Accent Colors */
+  --dusty-mauve-500: #B48A9C;
+  --rose-blush-400: #E8B7B1;
+  --peach-300: #F4C7A1;
+  --muted-peach: #F4D4B0;
+  --sage-green: #A8C5A0;
+
+  /* Text Colors */
+  --taupe-300: #B8AFA8;
+  --taupe-600: #6D625C;
+  --text-on-dark: #FFFFFF;
+  --text-muted-on-dark: #FFFFFFAA;
+
+  /* Utility Colors */
+  --star-yellow: #F5A623;
+  --success-green: #4CAF50;
+  --whatsapp-green: #25D366;
+  --gold-glow: #C6A75E33;
+  --overlay-dim: #00000066;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-modal: 24px;
+  --radius-pill: 999px;
+
+  /* Spacing */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+}
+
+@layer base {
+  html, body {
+    height: 100%;
+  }
+
+  /* Font Utilities */
+  .font-heading {
+    font-family: "Playfair Display", serif;
+  }
+
+  .font-body {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  /* Icon Font */
+  .icon-lucide {
+    font-family: "lucide";
+  }
+}

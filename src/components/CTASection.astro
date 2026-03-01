@@ -1,0 +1,64 @@
+---
+interface Props {
+  backgroundImage?: string;
+}
+
+const { backgroundImage = "/images/cta-bg.jpeg" } = Astro.props;
+---
+
+<section
+  id="contact"
+  class="relative flex flex-col items-center justify-center gap-6 h-[500px] w-full"
+  style={`background: linear-gradient(rgba(26, 21, 14, 0.8), rgba(26, 21, 14, 0.8)), url('${backgroundImage}') center/cover no-repeat;`}
+>
+  <!-- Divider -->
+  <div class="flex items-center gap-4 w-[200px]">
+    <div class="flex-1 h-px bg-[var(--brand-gold-500)]"></div>
+    <svg
+      class="w-5 h-5 text-[var(--brand-gold-500)]"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path
+        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275z"
+      ></path>
+    </svg>
+    <div class="flex-1 h-px bg-[var(--brand-gold-500)]"></div>
+  </div>
+
+  <!-- Title -->
+  <h2
+    class="font-heading text-[var(--white)] text-5xl font-bold leading-[1.2] text-center max-w-[700px]"
+  >
+    Let's Create Something<br />Extraordinary Together
+  </h2>
+
+  <!-- Description -->
+  <p
+    class="font-body text-[var(--brand-gold-300)] text-base font-normal leading-[1.7] text-center max-w-[550px]"
+  >
+    Tell us about your dream event and let our artisans bring it to life.<br
+    />Your celebration deserves nothing less than perfection.
+  </p>
+
+  <!-- CTA Buttons -->
+  <div class="flex items-center gap-4">
+    <a
+      href="#"
+      class="flex items-center justify-center gap-2 px-8 py-4 bg-[var(--brand-gold-500)] text-[var(--white)] font-body text-base font-medium rounded-full hover:bg-[var(--brand-gold-700)] transition-colors"
+    >
+      Get a Free Quote
+    </a>
+    <a
+      href="tel:+15551234567"
+      class="flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-[1.5px] border-[var(--white)] text-[var(--white)] font-body text-base font-medium rounded-full hover:bg-[var(--white)] hover:text-[var(--charcoal-900)] transition-colors"
+    >
+      Call Us Today
+    </a>
+  </div>
+
+  <!-- Trust Text -->
+  <p class="font-body text-[#FFFFFF99] text-[13px] font-normal">
+    Free consultation · No obligation · Trusted by 500+ families
+  </p>
+</section>

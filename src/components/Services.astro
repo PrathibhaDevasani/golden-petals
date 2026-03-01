@@ -1,0 +1,97 @@
+---
+const services = [
+  {
+    icon: "heart",
+    title: "Wedding Decorations",
+    description:
+      "Majestic mandaps, floral aisles, and stage setups that transform your wedding into a royal celebration.",
+    image: "/images/service-wedding.jpeg",
+  },
+  {
+    icon: "sparkles",
+    title: "Reception Setups",
+    description:
+      "Elegant reception venues with fairy lights, crystal chandeliers, and stunning floral arrangements.",
+    image: "/images/service-reception.jpeg",
+  },
+  {
+    icon: "cake",
+    title: "Birthday Celebrations",
+    description:
+      "Whimsical themed parties for children and grand milestone celebrations for all ages.",
+    image: "/images/service-birthday.jpeg",
+  },
+  {
+    icon: "landmark",
+    title: "Traditional Ceremonies",
+    description:
+      "Sacred and authentic traditional setups honoring cultural heritage with exquisite craftsmanship.",
+    image: "/images/service-traditional.jpeg",
+  },
+];
+
+const icons: Record<string, string> = {
+  heart: `<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" fill="none" stroke="currentColor" stroke-width="2"/>`,
+  sparkles: `<path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 3v4M19 17v4M3 5h4M17 19h4" stroke="currentColor" stroke-width="2"/>`,
+  cake: `<path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 21h20" stroke="currentColor" stroke-width="2"/><path d="M7 8v3M12 8v3M17 8v3" stroke="currentColor" stroke-width="2"/><path d="M7 4h.01M12 4h.01M17 4h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+  landmark: `<line x1="3" x2="21" y1="22" y2="22" stroke="currentColor" stroke-width="2"/><line x1="6" x2="6" y1="18" y2="11" stroke="currentColor" stroke-width="2"/><line x1="10" x2="10" y1="18" y2="11" stroke="currentColor" stroke-width="2"/><line x1="14" x2="14" y1="18" y2="11" stroke="currentColor" stroke-width="2"/><line x1="18" x2="18" y1="18" y2="11" stroke="currentColor" stroke-width="2"/><polygon points="12 2 20 7 4 7" fill="none" stroke="currentColor" stroke-width="2"/>`,
+};
+---
+
+<section
+  id="services"
+  class="flex flex-col items-center gap-12 w-full px-20 py-20 bg-[var(--warm-white)]"
+>
+  <!-- Section Header -->
+  <div class="flex flex-col items-center gap-4">
+    <span
+      class="text-[var(--brand-gold-500)] font-body text-[13px] font-semibold tracking-[3px]"
+    >
+      OUR SERVICES
+    </span>
+    <h2
+      class="font-heading text-[var(--charcoal-900)] text-[42px] font-bold text-center"
+    >
+      Crafting Unforgettable Moments
+    </h2>
+    <p
+      class="font-body text-[var(--taupe-600)] text-base font-normal leading-[1.7] text-center max-w-[600px]"
+    >
+      From grand wedding mandaps to enchanting birthday celebrations,<br />we
+      bring your vision to life with artistry and elegance.
+    </p>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="grid grid-cols-4 gap-6 w-full">
+    {
+      services.map((service) => (
+        <article class="flex flex-col overflow-hidden bg-[var(--white)] rounded-[var(--radius-lg)] shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
+          {/* Gold accent bar */}
+          <div class="h-[3px] w-full bg-[var(--brand-gold-500)]" />
+
+          {/* Image */}
+          <div
+            class="h-[220px] w-full bg-cover bg-center"
+            style={`background-image: url('${service.image}')`}
+          />
+
+          {/* Content */}
+          <div class="flex flex-col gap-3 p-6">
+            <svg
+              class="w-7 h-7 text-[var(--brand-gold-500)]"
+              viewBox="0 0 24 24"
+              set:html={icons[service.icon]}
+            />
+            <h3 class="font-heading text-[var(--charcoal-900)] text-[22px] font-semibold">
+              {service.title}
+            </h3>
+            <p class="font-body text-[var(--taupe-600)] text-sm font-normal leading-[1.6]">
+              {service.description}
+            </p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

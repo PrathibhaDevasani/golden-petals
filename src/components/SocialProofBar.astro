@@ -1,0 +1,56 @@
+---
+const proofItems = [
+  {
+    icon: "star",
+    text: "4.9/5 Rating",
+    iconColor: "var(--star-yellow)",
+  },
+  {
+    icon: "instagram",
+    text: "10K+ Followers",
+    iconColor: "var(--dusty-mauve-500)",
+  },
+  {
+    icon: "award",
+    text: "Best Event Decorator 2025",
+    iconColor: "var(--brand-gold-500)",
+  },
+  {
+    icon: "heart",
+    text: "500+ Happy Families",
+    iconColor: "var(--rose-blush-400)",
+  },
+];
+
+const icons: Record<string, string> = {
+  star: `<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>`,
+  instagram: `<rect width="20" height="20" x="2" y="2" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" stroke="currentColor" stroke-width="2"/>`,
+  award: `<circle cx="12" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" fill="none" stroke="currentColor" stroke-width="2"/>`,
+  heart: `<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" fill="currentColor"/>`,
+};
+---
+
+<section
+  class="flex items-center justify-center gap-8 w-full px-8 py-5 bg-[var(--warm-white)] border border-[var(--brand-gold-300)] rounded-[var(--radius-md)]"
+>
+  {
+    proofItems.map((item, index) => (
+      <>
+        <div class="flex items-center gap-2">
+          <svg
+            class="w-[18px] h-[18px]"
+            viewBox="0 0 24 24"
+            style={`color: ${item.iconColor}`}
+            set:html={icons[item.icon]}
+          />
+          <span class="text-[var(--charcoal-900)] font-body text-sm font-semibold">
+            {item.text}
+          </span>
+        </div>
+        {index < proofItems.length - 1 && (
+          <div class="w-px h-6 bg-[var(--brand-gold-300)]" />
+        )}
+      </>
+    ))
+  }
+</section>

@@ -1,0 +1,74 @@
+---
+const instagramImages = [
+  "/images/insta-1.jpeg",
+  "/images/insta-2.jpeg",
+  "/images/insta-3.jpeg",
+  "/images/insta-4.jpeg",
+  "/images/insta-5.jpeg",
+];
+---
+
+<section
+  class="flex flex-col items-center gap-8 w-full px-20 py-16 bg-[var(--cream-50)]"
+>
+  <!-- Header -->
+  <div class="flex flex-col items-center gap-3">
+    <span
+      class="text-[var(--brand-gold-500)] font-body text-[13px] font-semibold tracking-[3px]"
+    >
+      FOLLOW US ON INSTAGRAM
+    </span>
+    <h2 class="font-heading text-[var(--charcoal-900)] text-[32px] font-bold">
+      @the.golden.petals
+    </h2>
+  </div>
+
+  <!-- Instagram Grid -->
+  <div class="flex gap-3 w-full h-[240px]">
+    {
+      instagramImages.map((image) => (
+        <a
+          href="https://instagram.com/the.golden.petals"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="relative flex-1 h-full rounded-[var(--radius-sm)] overflow-hidden group"
+        >
+          <div
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
+            style={`background-image: url('${image}')`}
+          />
+          <div class="absolute inset-0 bg-[#00000044] opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+            <svg
+              class="w-8 h-8 text-[var(--white)]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+
+  <!-- WhatsApp FAB -->
+  <a
+    href="https://wa.me/15551234567"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="flex items-center gap-2.5 px-6 py-3.5 bg-[var(--whatsapp-green)] text-[var(--white)] rounded-[28px] shadow-[0_4px_16px_rgba(37,211,102,0.27)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.4)] transition-shadow"
+  >
+    <svg class="w-[22px] h-[22px] fill-[var(--white)]" viewBox="0 0 24 24">
+      <path
+        d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"></path>
+    </svg>
+    <span class="font-body text-sm font-semibold">Chat with us</span>
+  </a>
+</section>

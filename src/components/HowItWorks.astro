@@ -1,0 +1,111 @@
+---
+const steps = [
+  {
+    number: "01",
+    icon: "message-circle",
+    title: "Share Your Vision",
+    description:
+      "Tell us about your dream celebration — the theme, colors, and the emotions you want to evoke.",
+  },
+  {
+    number: "02",
+    icon: "pen-tool",
+    title: "Design & Plan",
+    description:
+      "Our artisans create detailed mood boards, 3D renderings, and curated material palettes for your approval.",
+  },
+  {
+    number: "03",
+    icon: "hammer",
+    title: "Craft & Create",
+    description:
+      "We bring the design to life — sourcing the finest florals, fabrics, and materials for your celebration.",
+  },
+  {
+    number: "04",
+    icon: "party-popper",
+    title: "Celebrate!",
+    description:
+      "Sit back and enjoy your stunning event while we handle every last detail with white-glove service.",
+  },
+];
+
+const icons: Record<string, string> = {
+  "message-circle": `<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" fill="none" stroke="currentColor" stroke-width="2"/>`,
+  "pen-tool": `<path d="m12 19 7-7 3 3-7 7-3-3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m2 2 7.586 7.586" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="11" cy="11" r="2" fill="none" stroke="currentColor" stroke-width="2"/>`,
+  hammer: `<path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17.64 15 22 10.64" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91" fill="none" stroke="currentColor" stroke-width="2"/>`,
+  "party-popper": `<path d="M5.8 11.3 2 22l10.7-3.79" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 3h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M15 2h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 20h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12v0c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10" fill="none" stroke="currentColor" stroke-width="2"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11v0c-.11.7-.72 1.22-1.43 1.22H17" fill="none" stroke="currentColor" stroke-width="2"/><path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98v0C9.52 4.9 9 5.52 9 6.23V7" fill="none" stroke="currentColor" stroke-width="2"/>`,
+};
+---
+
+<section
+  class="flex flex-col items-center gap-12 w-full px-20 py-20 bg-[var(--charcoal-900)]"
+>
+  <!-- Section Header -->
+  <div class="flex flex-col items-center gap-4">
+    <span
+      class="text-[var(--brand-gold-500)] font-body text-[13px] font-semibold tracking-[3px]"
+    >
+      HOW IT WORKS
+    </span>
+    <h2
+      class="font-heading text-[var(--white)] text-[42px] font-bold text-center"
+    >
+      Your Journey to a Perfect Celebration
+    </h2>
+    <p
+      class="font-body text-[var(--taupe-300)] text-base font-normal leading-[1.7] text-center max-w-[550px]"
+    >
+      From first consultation to the final petal, we guide you through every
+      step.
+    </p>
+  </div>
+
+  <!-- Divider -->
+  <div class="flex items-center gap-4 w-[200px]">
+    <div class="flex-1 h-px bg-[var(--brand-gold-500)]"></div>
+    <svg
+      class="w-4 h-4 text-[var(--brand-gold-500)]"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path
+        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275z"
+      ></path>
+    </svg>
+    <div class="flex-1 h-px bg-[var(--brand-gold-500)]"></div>
+  </div>
+
+  <!-- Steps Grid -->
+  <div class="grid grid-cols-4 gap-8 w-full">
+    {
+      steps.map((step) => (
+        <div class="flex flex-col items-center gap-4 px-6 py-8">
+          {/* Circle with icon */}
+          <div class="relative w-16 h-16 flex items-center justify-center rounded-full bg-[#C6A75E22] border-[1.5px] border-[var(--brand-gold-500)]">
+            <svg
+              class="w-6 h-6 text-[var(--brand-gold-500)]"
+              viewBox="0 0 24 24"
+              set:html={icons[step.icon]}
+            />
+          </div>
+
+          {/* Number */}
+          <span class="text-[var(--brand-gold-500)] font-heading text-sm font-semibold tracking-[2px]">
+            {step.number}
+          </span>
+
+          {/* Title */}
+          <h3 class="font-heading text-[var(--white)] text-xl font-semibold text-center">
+            {step.title}
+          </h3>
+
+          {/* Description */}
+          <p class="font-body text-[var(--taupe-300)] text-sm font-normal leading-[1.7] text-center">
+            {step.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</section>

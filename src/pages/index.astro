@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import SocialProofBar from "../components/SocialProofBar.astro";
+import Services from "../components/Services.astro";
+import Portfolio from "../components/Portfolio.astro";
+import VideoShowcase from "../components/VideoShowcase.astro";
+import WhyChooseUs from "../components/WhyChooseUs.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import Stats from "../components/Stats.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CTASection from "../components/CTASection.astro";
+import Instagram from "../components/Instagram.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Golden Petals | Luxury Event Decorations">
+  <div class="flex flex-col w-full bg-[var(--cream-50)]">
+    <Header />
+    <Hero />
+    <div class="px-20 -mt-10 relative z-10">
+      <SocialProofBar />
+    </div>
+    <Services />
+    <Portfolio />
+    <VideoShowcase />
+    <WhyChooseUs />
+    <HowItWorks />
+    <Stats />
+    <Testimonials />
+    <CTASection />
+    <Instagram />
+    <Footer />
+  </div>
+</Layout>
