@@ -11,7 +11,7 @@ const portfolioImages = [
 
 <section
   id="portfolio"
-  class="flex flex-col items-center gap-12 w-full px-20 py-20 bg-[var(--charcoal-900)]"
+  class="flex flex-col items-center gap-12 w-full px-5 md:px-10 lg:px-20 py-12 lg:py-20 bg-[var(--charcoal-900)]"
 >
   <!-- Section Header -->
   <div class="flex flex-col items-center gap-4">
@@ -21,7 +21,7 @@ const portfolioImages = [
       OUR PORTFOLIO
     </span>
     <h2
-      class="font-heading text-[var(--white)] text-[42px] font-bold text-center"
+      class="font-heading text-[var(--white)] text-[28px] md:text-[36px] lg:text-[42px] font-bold text-center"
     >
       A Glimpse of Our Artistry
     </h2>
@@ -50,8 +50,20 @@ const portfolioImages = [
     <div class="flex-1 h-px bg-[var(--brand-gold-500)]"></div>
   </div>
 
-  <!-- Portfolio Grid (Masonry-like) -->
-  <div class="flex gap-4 w-full h-[600px]">
+  <!-- Mobile Portfolio Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full lg:hidden">
+    {
+      portfolioImages.map((image) => (
+        <div
+          class="h-[200px] rounded-[var(--radius-md)] bg-cover bg-center"
+          style={`background-image: url('${image.src}')`}
+        />
+      ))
+    }
+  </div>
+
+  <!-- Desktop Portfolio Grid (Masonry-like) -->
+  <div class="hidden lg:flex gap-4 w-full h-[600px]">
     <!-- Column 1 -->
     <div class="flex flex-col gap-4 flex-1 h-full">
       <div

@@ -31,12 +31,12 @@ const icons: Record<string, string> = {
 ---
 
 <section
-  class="flex items-center justify-center gap-8 w-full px-8 py-5 bg-[var(--warm-white)] border border-[var(--brand-gold-300)] rounded-[var(--radius-md)]"
+  class="grid grid-cols-2 lg:flex items-center justify-center gap-4 lg:gap-8 w-full px-5 lg:px-8 py-5 bg-[var(--warm-white)] border border-[var(--brand-gold-300)] rounded-[var(--radius-md)]"
 >
   {
     proofItems.map((item, index) => (
       <>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 justify-center">
           <svg
             class="w-[18px] h-[18px]"
             viewBox="0 0 24 24"
@@ -48,7 +48,7 @@ const icons: Record<string, string> = {
           </span>
         </div>
         {index < proofItems.length - 1 && (
-          <div class="w-px h-6 bg-[var(--brand-gold-300)]" />
+          <div class="w-px h-6 bg-[var(--brand-gold-300)] hidden lg:block" />
         )}
       </>
     ))

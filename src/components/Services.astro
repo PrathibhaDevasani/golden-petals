@@ -40,7 +40,7 @@ const icons: Record<string, string> = {
 
 <section
   id="services"
-  class="flex flex-col items-center gap-12 w-full px-20 py-20 bg-[var(--warm-white)]"
+  class="flex flex-col items-center gap-12 w-full px-5 md:px-10 lg:px-20 py-12 lg:py-20 bg-[var(--warm-white)]"
 >
   <!-- Section Header -->
   <div class="flex flex-col items-center gap-4">
@@ -50,20 +50,20 @@ const icons: Record<string, string> = {
       OUR SERVICES
     </span>
     <h2
-      class="font-heading text-[var(--charcoal-900)] text-[42px] font-bold text-center"
+      class="font-heading text-[var(--charcoal-900)] text-[28px] md:text-[36px] lg:text-[42px] font-bold text-center"
     >
       Crafting Unforgettable Moments
     </h2>
     <p
       class="font-body text-[var(--taupe-600)] text-base font-normal leading-[1.7] text-center max-w-[600px]"
     >
-      From grand wedding mandaps to enchanting birthday celebrations,<br />we
+      From grand wedding mandaps to enchanting birthday celebrations, we
       bring your vision to life with artistry and elegance.
     </p>
   </div>
 
   <!-- Services Grid -->
-  <div class="grid grid-cols-4 gap-6 w-full">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
     {
       services.map((service) => (
         <article class="flex flex-col overflow-hidden bg-[var(--white)] rounded-[var(--radius-lg)] shadow-[0_4px_16px_rgba(0,0,0,0.04)]">

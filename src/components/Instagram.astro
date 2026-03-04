@@ -9,7 +9,7 @@ const instagramImages = [
 ---
 
 <section
-    class="flex flex-col items-center gap-8 w-full px-20 py-16 bg-[var(--cream-50)]"
+    class="flex flex-col items-center gap-8 w-full px-5 md:px-10 lg:px-20 py-12 lg:py-16 bg-[var(--cream-50)]"
 >
     <!-- Header -->
     <div class="flex flex-col items-center gap-3">
@@ -19,14 +19,53 @@ const instagramImages = [
             FOLLOW US ON INSTAGRAM
         </span>
         <h2
-            class="font-heading text-[var(--charcoal-900)] text-[32px] font-bold"
+            class="font-heading text-[var(--charcoal-900)] text-[28px] md:text-[32px] font-bold"
         >
             @the.golden.petals
         </h2>
     </div>
 
-    <!-- Instagram Grid -->
-    <div class="flex gap-3 w-full h-[240px]">
+    <!-- Mobile Instagram Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full lg:hidden">
+        {
+            instagramImages.map((image) => (
+                <a
+                    href="https://instagram.com/the.golden.petals"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="relative h-[150px] sm:h-[180px] rounded-[var(--radius-sm)] overflow-hidden group"
+                >
+                    <div
+                        class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
+                        style={`background-image: url('${image}')`}
+                    />
+                    <div class="absolute inset-0 bg-[#00000044] opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                        <svg
+                            class="w-8 h-8 text-[var(--white)]"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <rect
+                                width="20"
+                                height="20"
+                                x="2"
+                                y="2"
+                                rx="5"
+                                ry="5"
+                            />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
+                    </div>
+                </a>
+            ))
+        }
+    </div>
+
+    <!-- Desktop Instagram Grid -->
+    <div class="hidden lg:flex gap-3 w-full h-[240px]">
         {
             instagramImages.map((image) => (
                 <a

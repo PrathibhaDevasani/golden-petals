@@ -12,24 +12,14 @@ const socialLinks = [
         href: "https://instagram.com/the.golden.petals",
         icon: `<rect width="20" height="20" x="2" y="2" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" stroke="currentColor" stroke-width="2"/>`,
     },
-    // {
-    //   name: "Facebook",
-    //   href: "https://facebook.com/goldenpetals",
-    //   icon: `<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="none" stroke="currentColor" stroke-width="2"/>`,
-    // },
-    // {
-    //   name: "YouTube",
-    //   href: "https://youtube.com/goldenpetals",
-    //   icon: `<path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 15 5-3-5-3z" fill="none" stroke="currentColor" stroke-width="2"/>`,
-    // },
 ];
 ---
 
 <footer
-    class="flex flex-col gap-8 w-full px-12 pt-12 pb-8 bg-[var(--cream-50)]"
+    class="flex flex-col gap-8 w-full px-5 md:px-8 lg:px-12 pt-12 pb-8 bg-[var(--cream-50)]"
 >
     <!-- Main Footer Content -->
-    <div class="flex gap-12 w-full">
+    <div class="flex flex-col md:flex-row gap-12 w-full">
         <!-- About Column -->
         <div class="flex flex-col gap-4 flex-1">
             <a href="/">
@@ -95,7 +85,7 @@ const socialLinks = [
             </h3>
             <a
                 href="mailto:events.thegoldenpetals@gmail.com"
-                class="font-body text-[var(--taupe-600)] text-sm font-normal hover:text-[var(--brand-gold-500)] transition-colors"
+                class="font-body text-[var(--taupe-600)] text-sm font-normal hover:text-[var(--brand-gold-500)] transition-colors break-all"
             >
                 events.thegoldenpetals@gmail.com
             </a>

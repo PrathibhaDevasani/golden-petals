@@ -31,7 +31,7 @@ const icons: Record<string, string> = {
 ---
 
 <section
-  class="flex items-center justify-around w-full px-20 py-12 bg-[var(--brand-gold-500)]"
+  class="grid grid-cols-2 lg:flex lg:justify-around items-center w-full px-5 md:px-10 lg:px-20 py-12 gap-8 lg:gap-0 bg-[var(--brand-gold-500)]"
 >
   {
     stats.map((stat) => (
@@ -41,7 +41,7 @@ const icons: Record<string, string> = {
           viewBox="0 0 24 24"
           set:html={icons[stat.icon]}
         />
-        <span class="font-heading text-[var(--white)] text-[40px] font-bold">
+        <span class="font-heading text-[var(--white)] text-[32px] lg:text-[40px] font-bold">
           {stat.value}
         </span>
         <span class="font-body text-[#FFFFFFCC] text-sm font-medium">

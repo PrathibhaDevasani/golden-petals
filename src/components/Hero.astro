@@ -7,7 +7,7 @@ const { backgroundImage = "/images/hero-bg.jpeg" } = Astro.props;
 ---
 
 <section
-  class="relative flex flex-col items-center justify-center gap-6 h-[780px] w-full"
+  class="relative flex flex-col items-center justify-center gap-6 min-h-[520px] md:min-h-[650px] lg:h-[780px] w-full px-5 md:px-8"
   style={`background: linear-gradient(rgba(26, 21, 14, 0.6), rgba(26, 21, 14, 0.6)), url('${backgroundImage}') center/cover no-repeat;`}
 >
   <!-- Tag Badge -->
@@ -32,30 +32,30 @@ const { backgroundImage = "/images/hero-bg.jpeg" } = Astro.props;
 
   <!-- Headline -->
   <h1
-    class="font-heading text-[var(--white)] text-[64px] font-bold leading-[1.15] text-center max-w-[900px]"
+    class="font-heading text-[var(--white)] text-[36px] md:text-[48px] lg:text-[64px] font-bold leading-[1.15] text-center max-w-[900px]"
   >
-    Where Dreams Blossom<br />Into Grand Celebrations
+    Where Dreams Blossom Into Grand Celebrations
   </h1>
 
   <!-- Subheadline -->
   <p
     class="font-body text-[#E5D2A3] text-lg font-normal leading-[1.7] text-center max-w-[700px]"
   >
-    We craft breathtaking wedding mandaps, enchanting receptions, and<br
-    />unforgettable event experiences that leave lasting memories.
+    We craft breathtaking wedding mandaps, enchanting receptions, and
+    unforgettable event experiences that leave lasting memories.
   </p>
 
   <!-- CTA Buttons -->
-  <div class="flex items-center gap-4">
+  <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
     <a
       href="#portfolio"
-      class="flex items-center justify-center gap-2 px-8 py-4 bg-[var(--brand-gold-500)] text-[var(--white)] font-body text-base font-medium rounded-full hover:bg-[var(--brand-gold-700)] transition-colors"
+      class="flex items-center justify-center gap-2 px-8 py-4 bg-[var(--brand-gold-500)] text-[var(--white)] font-body text-base font-medium rounded-full hover:bg-[var(--brand-gold-700)] transition-colors w-full sm:w-auto"
     >
       Explore Our Work
     </a>
     <a
       href="#contact"
-      class="flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-[1.5px] border-[var(--white)] text-[var(--white)] font-body text-base font-medium rounded-full hover:bg-[var(--white)] hover:text-[var(--charcoal-900)] transition-colors"
+      class="flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-[1.5px] border-[var(--white)] text-[var(--white)] font-body text-base font-medium rounded-full hover:bg-[var(--white)] hover:text-[var(--charcoal-900)] transition-colors w-full sm:w-auto"
     >
       Book Consultation
     </a>
