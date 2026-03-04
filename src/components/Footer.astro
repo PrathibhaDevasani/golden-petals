@@ -1,126 +1,128 @@
 ---
 const quickLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact Us", href: "#contact" },
+    { label: "Services", href: "#services" },
+    { label: "Portfolio", href: "#portfolio" },
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "Contact Us", href: "#contact" },
 ];
 
 const socialLinks = [
-  {
-    name: "Instagram",
-    href: "https://instagram.com/the.golden.petals",
-    icon: `<rect width="20" height="20" x="2" y="2" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" stroke="currentColor" stroke-width="2"/>`,
-  },
-  {
-    name: "Facebook",
-    href: "https://facebook.com/goldenpetals",
-    icon: `<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="none" stroke="currentColor" stroke-width="2"/>`,
-  },
-  {
-    name: "YouTube",
-    href: "https://youtube.com/goldenpetals",
-    icon: `<path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 15 5-3-5-3z" fill="none" stroke="currentColor" stroke-width="2"/>`,
-  },
+    {
+        name: "Instagram",
+        href: "https://instagram.com/the.golden.petals",
+        icon: `<rect width="20" height="20" x="2" y="2" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" stroke="currentColor" stroke-width="2"/>`,
+    },
+    // {
+    //   name: "Facebook",
+    //   href: "https://facebook.com/goldenpetals",
+    //   icon: `<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="none" stroke="currentColor" stroke-width="2"/>`,
+    // },
+    // {
+    //   name: "YouTube",
+    //   href: "https://youtube.com/goldenpetals",
+    //   icon: `<path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 15 5-3-5-3z" fill="none" stroke="currentColor" stroke-width="2"/>`,
+    // },
 ];
 ---
 
-<footer class="flex flex-col gap-8 w-full px-12 pt-12 pb-8 bg-[var(--cream-50)]">
-  <!-- Main Footer Content -->
-  <div class="flex gap-12 w-full">
-    <!-- About Column -->
-    <div class="flex flex-col gap-4 flex-1">
-      <a href="/">
-        <img
-          src="/images/logo.png"
-          alt="Golden Petals"
-          class="h-[50px] w-auto object-contain"
-        />
-      </a>
-      <p
-        class="font-body text-[var(--taupe-600)] text-sm font-normal leading-[1.6]"
-      >
-        Luxury wedding & event decorations that transform your celebrations into
-        unforgettable experiences.
-      </p>
-      <!-- Social Links -->
-      <div class="flex gap-4">
-        {
-          socialLinks.map((social) => (
-            <a
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-[var(--taupe-600)] hover:text-[var(--brand-gold-500)] transition-colors"
-              aria-label={social.name}
-            >
-              <svg
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-                set:html={social.icon}
-              />
+<footer
+    class="flex flex-col gap-8 w-full px-12 pt-12 pb-8 bg-[var(--cream-50)]"
+>
+    <!-- Main Footer Content -->
+    <div class="flex gap-12 w-full">
+        <!-- About Column -->
+        <div class="flex flex-col gap-4 flex-1">
+            <a href="/">
+                <img
+                    src="/images/logo.png"
+                    alt="Golden Petals"
+                    class="h-[50px] w-auto object-contain"
+                />
             </a>
-          ))
-        }
-      </div>
+            <p
+                class="font-body text-[var(--taupe-600)] text-sm font-normal leading-[1.6]"
+            >
+                Luxury wedding & event decorations that transform your
+                celebrations into unforgettable experiences.
+            </p>
+            <!-- Social Links -->
+            <div class="flex gap-4">
+                {
+                    socialLinks.map((social) => (
+                        <a
+                            href={social.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-[var(--taupe-600)] hover:text-[var(--brand-gold-500)] transition-colors"
+                            aria-label={social.name}
+                        >
+                            <svg
+                                class="w-5 h-5"
+                                viewBox="0 0 24 24"
+                                set:html={social.icon}
+                            />
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="flex flex-col gap-3 flex-1">
+            <h3
+                class="font-body text-[var(--charcoal-900)] text-sm font-semibold tracking-[0.5px]"
+            >
+                Quick Links
+            </h3>
+            {
+                quickLinks.map((link) => (
+                    <a
+                        href={link.href}
+                        class="font-body text-[var(--taupe-600)] text-sm font-normal hover:text-[var(--brand-gold-500)] transition-colors"
+                    >
+                        {link.label}
+                    </a>
+                ))
+            }
+        </div>
+
+        <!-- Contact Column -->
+        <div class="flex flex-col gap-3 flex-1">
+            <h3
+                class="font-body text-[var(--charcoal-900)] text-sm font-semibold tracking-[0.5px]"
+            >
+                Get In Touch
+            </h3>
+            <a
+                href="mailto:events.thegoldenpetals@gmail.com"
+                class="font-body text-[var(--taupe-600)] text-sm font-normal hover:text-[var(--brand-gold-500)] transition-colors"
+            >
+                events.thegoldenpetals@gmail.com
+            </a>
+            <a
+                href="tel:+919030714446"
+                class="font-body text-[var(--taupe-600)] text-sm font-normal hover:text-[var(--brand-gold-500)] transition-colors"
+            >
+                +91-9030714446
+            </a>
+            <a
+                href="https://instagram.com/the.golden.petals"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-body text-[var(--brand-gold-500)] text-sm font-normal hover:text-[var(--brand-gold-700)] transition-colors"
+            >
+                @the.golden.petals
+            </a>
+        </div>
     </div>
 
-    <!-- Quick Links Column -->
-    <div class="flex flex-col gap-3 flex-1">
-      <h3
-        class="font-body text-[var(--charcoal-900)] text-sm font-semibold tracking-[0.5px]"
-      >
-        Quick Links
-      </h3>
-      {
-        quickLinks.map((link) => (
-          <a
-            href={link.href}
-            class="font-body text-[var(--taupe-600)] text-sm font-normal hover:text-[var(--brand-gold-500)] transition-colors"
-          >
-            {link.label}
-          </a>
-        ))
-      }
+    <!-- Divider -->
+    <div class="w-full h-px bg-[var(--brand-gold-300)]"></div>
+
+    <!-- Copyright -->
+    <div class="flex justify-center w-full">
+        <p class="font-body text-[var(--taupe-600)] text-xs font-normal">
+            © 2026 The Golden Petals. All rights reserved.
+        </p>
     </div>
-
-    <!-- Contact Column -->
-    <div class="flex flex-col gap-3 flex-1">
-      <h3
-        class="font-body text-[var(--charcoal-900)] text-sm font-semibold tracking-[0.5px]"
-      >
-        Get In Touch
-      </h3>
-      <a
-        href="mailto:hello@goldenpetals.com"
-        class="font-body text-[var(--taupe-600)] text-sm font-normal hover:text-[var(--brand-gold-500)] transition-colors"
-      >
-        hello@goldenpetals.com
-      </a>
-      <a
-        href="tel:+15551234567"
-        class="font-body text-[var(--taupe-600)] text-sm font-normal hover:text-[var(--brand-gold-500)] transition-colors"
-      >
-        +1 (555) 123-4567
-      </a>
-      <a
-        href="https://instagram.com/the.golden.petals"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="font-body text-[var(--brand-gold-500)] text-sm font-normal hover:text-[var(--brand-gold-700)] transition-colors"
-      >
-        @the.golden.petals
-      </a>
-    </div>
-  </div>
-
-  <!-- Divider -->
-  <div class="w-full h-px bg-[var(--brand-gold-300)]"></div>
-
-  <!-- Copyright -->
-  <div class="flex justify-center w-full">
-    <p class="font-body text-[var(--taupe-600)] text-xs font-normal">
-      © 2026 The Golden Petals. All rights reserved.
-    </p>
-  </div>
 </footer>
