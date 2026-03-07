@@ -3,7 +3,7 @@ interface Props {
   logoSrc?: string;
 }
 
-const { logoSrc = "/images/logo.png" } = Astro.props;
+const { logoSrc = "/images/logo.webp" } = Astro.props;
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -22,6 +22,8 @@ const navLinks = [
       <img
         src={logoSrc}
         alt="Golden Petals"
+        width="56"
+        height="56"
         class="h-14 w-auto object-contain"
       />
     </a>
@@ -101,7 +103,7 @@ const navLinks = [
 >
   <div class="flex items-center justify-between h-[72px] px-5 md:px-8">
     <a href="/">
-      <img src={logoSrc} alt="Golden Petals" class="h-14 w-auto object-contain" />
+      <img src={logoSrc} alt="Golden Petals" width="56" height="56" class="h-14 w-auto object-contain" />
     </a>
     <button
       id="mobile-menu-close"
